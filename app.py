@@ -65,7 +65,7 @@ def students():
         return redirect(url_for("students"))
 
     student_list = conn.execute(
-        "SELECT * FROM students ORDER BY id DESC"
+        "SELECT * FROM students ORDER BY id ASC"
     ).fetchall()
     conn.close()
 
@@ -97,4 +97,5 @@ def contact():
 
 if __name__ == "__main__":
     create_table()
-    app.run(debug=True)
+    app.run(debug=True)  
+ 

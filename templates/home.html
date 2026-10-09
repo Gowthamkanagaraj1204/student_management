@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+
+{% block title %}Home | Student Portal{% endblock %}
+
+{% block content %}
+<section class="hero">
+    <h1>Welcome to Student Management System</h1>
+    <p>Manage student information easily in one place.</p>
+
+    <a class="btn" href="{{ url_for('students') }}">
+        View Students
+    </a>
+</section>
+
+<section class="card">
+    <h2>Dashboard</h2>
+    <p>Total Registered Students</p>
+    <div class="count">{{ count }}</div>
+    <a href="{{ url_for('students') }}">Manage student records →</a>
+</section>
+{% endblock %}
